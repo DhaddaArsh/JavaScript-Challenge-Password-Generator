@@ -42,16 +42,24 @@ function generatePassword() {
     return;
   }
 
-  const confirmLength = parseInt(Length)
+    if (Lowercase == true) {
+      userChoices = userChoices.concat(Lowercase);
+    }
+    if (Uppercase == true) {
+      userChoices = userChoices.concat(Uppercase);
+    }
+    if (Number == true) {
+      userChoices = userChoices.concat(Numeric);
+    }
+    if (Specials == true) {
+      userChoices = userChoices.concat(Specials);
+    }
 
-  var randomPassword = ""
-
-  for (var i = 0; i < confirmLength; i++) {
-    inputs[
-      Math.floor(Math.random() * inputs.length)];
-
-    randPassword += inputs[
-      Math.floor(Math.random() * inputs.length)];
+  for (var i = 0; i < passwordLength; i++) {
+      var randomPassword = Math.floor(Math.random() * userChoices.length);
+      var character = userChoices[randomPassword]
+      console.log(character);
+      char.push(character);
     }
   return randomPassword;
 }
