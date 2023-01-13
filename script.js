@@ -42,16 +42,16 @@ function generatePassword() {
     return;
   }
 
-    if (Lowercase == true) {
+    if (confirmLowercase == true) {
       userChoices = userChoices.concat(Lowercase);
     }
-    if (Uppercase == true) {
+    if (confirmUppercase == true) {
       userChoices = userChoices.concat(Uppercase);
     }
-    if (Number == true) {
+    if (confirmNumber == true) {
       userChoices = userChoices.concat(Numeric);
     }
-    if (Specials == true) {
+    if (confirmSpecials == true) {
       userChoices = userChoices.concat(Specials);
     }
 
